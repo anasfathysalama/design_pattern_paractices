@@ -1,2 +1,2 @@
 # design_pattern_paractices
-implemenation of design pattern and oop concepts
+implemenation of design patterns and oop concepts
