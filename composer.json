@@ -1,0 +1,18 @@
+{
+  "name": "user/design_pattern",
+  "autoload": {
+    "psr-4": {
+      "Creational\\": "Creational",
+      "Behavioral\\": "Behavioral",
+      "OOP\\": "OOP"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "Tests"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "9"
+  }
+}
