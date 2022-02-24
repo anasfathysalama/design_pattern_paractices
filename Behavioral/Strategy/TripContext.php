@@ -4,7 +4,7 @@ namespace Behavioral\Strategy;
 
 class TripContext
 {
-    private $travelStrategy;
+    private TravelStrategy $travelStrategy;
 
     public function __construct(TravelStrategy $travelStrategy)
     {
@@ -21,8 +21,6 @@ class TripContext
 
     public function confirmTrip(): void
     {
-
-        echo "Happy Trip From Strategy =>  {$this->travelStrategy->travel()}" ;
-
+        echo "Happy Trip From Strategy =>  {$this->travelStrategy->travel()}";
     }
 }
