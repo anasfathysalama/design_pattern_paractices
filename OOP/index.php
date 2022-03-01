@@ -1,13 +1,12 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use OOP\Relations\Teacher;
-use OOP\Printer\HtmlPrinter;
-use OOP\Printer\PlainTextPrinter;
+use OOP\Relations\Association\Printer\PlainTextPrinter;
+use OOP\Relations\Association\Teacher;
 
 /* implenetaion of association relation between teacher object and printer object */
 $teacher = new Teacher("Anas Fathy");
-$printerClass = new PlainTextPrinter;
+$printerClass = new PlainTextPrinter();
 var_dump($teacher->sayWelcome($printerClass));
 unset($teacher);
 echo "<br>";

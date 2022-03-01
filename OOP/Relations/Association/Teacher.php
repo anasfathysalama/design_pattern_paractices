@@ -1,8 +1,9 @@
 <?php
 
-namespace OOP\Relations;
 
-use OOP\Printer\Printer;
+namespace OOP\Relations\Association;
+
+use OOP\Relations\Association\Printer\Printer;
 
 class Teacher
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace OOP\Printer;
+namespace OOP\Relations\Association\Printer;
 
 
 abstract class Printer
