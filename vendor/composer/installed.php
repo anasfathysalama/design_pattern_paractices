@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'f3000d61ec538145ae3541c049054328b67e6c40',
     'name' => 'user/design_pattern',
   ),
   'versions' => 
@@ -267,6 +267,33 @@
       ),
       'reference' => '46cd95797e9df938fdd2b03693b5fca5e64b01ce',
     ),
+    'symfony/polyfill-mbstring' => 
+    array (
+      'pretty_version' => 'v1.24.0',
+      'version' => '1.24.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0abb51d2f102e00a4eefcf46ba7fec406d245825',
+    ),
+    'symfony/polyfill-php80' => 
+    array (
+      'pretty_version' => 'v1.24.0',
+      'version' => '1.24.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '57b712b08eddb97c762a8caa32c84e037892d2e9',
+    ),
+    'symfony/var-dumper' => 
+    array (
+      'pretty_version' => 'v5.4.5',
+      'version' => '5.4.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6efddb1cf6af5270b21c48c6103e81f920c220f0',
+    ),
     'theseer/tokenizer' => 
     array (
       'pretty_version' => '1.2.1',
@@ -278,12 +305,12 @@
     ),
     'user/design_pattern' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'f3000d61ec538145ae3541c049054328b67e6c40',
     ),
     'webmozart/assert' => 
     array (
