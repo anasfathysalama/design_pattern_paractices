@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'f3000d61ec538145ae3541c049054328b67e6c40',
+    'reference' => '267e80f4abce370142f0597341baa4bf47129fd0',
     'name' => 'user/design_pattern',
   ),
   'versions' => 
@@ -311,12 +311,12 @@ private static $installed = array (
     ),
     'symfony/var-dumper' => 
     array (
-      'pretty_version' => 'v5.4.5',
-      'version' => '5.4.5.0',
+      'pretty_version' => 'v5.4.6',
+      'version' => '5.4.6.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6efddb1cf6af5270b21c48c6103e81f920c220f0',
+      'reference' => '294e9da6e2e0dd404e983daa5aa74253d92c05d0',
     ),
     'theseer/tokenizer' => 
     array (
@@ -334,7 +334,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'f3000d61ec538145ae3541c049054328b67e6c40',
+      'reference' => '267e80f4abce370142f0597341baa4bf47129fd0',
     ),
     'webmozart/assert' => 
     array (
