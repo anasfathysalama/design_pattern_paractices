@@ -1,6 +1,8 @@
 <?php
 
-namespace Creational\FactoryMethod;
+namespace Creational\FactoryMethod\TransportTypes;
+
+use Creational\FactoryMethod\Transport;
 
 class Truck implements Transport
 {

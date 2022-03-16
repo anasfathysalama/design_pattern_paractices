@@ -1,9 +1,7 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use Creational\FactoryMethod\PlanFactory;
-use Creational\FactoryMethod\ShipFactory;
-use Creational\FactoryMethod\TruckFactory;
+
 
 use Creational\Builder\Builders\ComputerSimpleBuilder;
 use Creational\Builder\Director;
