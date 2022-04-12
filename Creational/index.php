@@ -2,7 +2,9 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 
-
+use Creational\AbstractFactory\DesktopForm\DesktopFormFactory;
+use Creational\AbstractFactory\RenderForm;
+use Creational\AbstractFactory\WebForm\WebFormFactory;
 use Creational\Builder\Builders\ComputerSimpleBuilder;
 use Creational\Builder\Director;
 use Creational\Builder\Builders\ComputerXlBuilder;
@@ -10,12 +12,12 @@ use Creational\Builder\Builders\ComputerXlBuilder;
 
 ###############  Builder Pattern Implementation #############################
 
-$director = new Director(new ComputerXlBuilder());
-$simpleComputer = $director->makeComputer();
-
-$director->changeBuilder(new ComputerSimpleBuilder());
-$xlComputer = $director->makeComputer();
-dump($xlComputer);
+//$director = new Director(new ComputerXlBuilder());
+//$simpleComputer = $director->makeComputer();
+//
+//$director->changeBuilder(new ComputerSimpleBuilder());
+//$xlComputer = $director->makeComputer();
+//dump($xlComputer);
 
 ###############  Builder Pattern Implementation #############################
 
@@ -39,3 +41,13 @@ dump($xlComputer);
 //echo $plan->deliver();
 
 ###############  Factory Pattern Implementation #############################
+
+###############  Abstract Factory Pattern Implementation #############################
+$form = new  RenderForm(new DesktopFormFactory());
+$form->render();
+echo "<br>";
+$form->changeFactory(new WebFormFactory());
+$form->render();
+
+
+###############  Abstract Factory Pattern Implementation #############################
