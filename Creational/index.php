@@ -8,6 +8,7 @@ use Creational\AbstractFactory\WebForm\WebFormFactory;
 use Creational\Builder\Builders\ComputerSimpleBuilder;
 use Creational\Builder\Director;
 use Creational\Builder\Builders\ComputerXlBuilder;
+use Creational\Singleton\Application;
 
 
 ###############  Builder Pattern Implementation #############################
@@ -19,7 +20,7 @@ use Creational\Builder\Builders\ComputerXlBuilder;
 //$xlComputer = $director->makeComputer();
 //dump($xlComputer);
 
-###############  Builder Pattern Implementation #############################
+###############  end implementation #############################
 
 
 ###############  Factory Pattern Implementation #############################
@@ -40,14 +41,23 @@ use Creational\Builder\Builders\ComputerXlBuilder;
 //$plan = $planFactory->createTransport();
 //echo $plan->deliver();
 
-###############  Factory Pattern Implementation #############################
+###############  end implementation #############################
 
 ###############  Abstract Factory Pattern Implementation #############################
-$form = new  RenderForm(new DesktopFormFactory());
-$form->render();
-echo "<br>";
-$form->changeFactory(new WebFormFactory());
-$form->render();
+//$form = new  RenderForm(new DesktopFormFactory());
+//$form->render();
+//echo "<br>";
+//$form->changeFactory(new WebFormFactory());
+//$form->render();
 
+###############  end implementation #############################
 
-###############  Abstract Factory Pattern Implementation #############################
+###############  Singleton Pattern Implementation #############################
+$instanceOne = Application::getInstance();
+$instanceTwo = Application::getInstance();
+if ($instanceOne === $instanceTwo) {
+    echo "The Two instances are the same";
+} else {
+    echo "The Two instances not the same";
+}
+###############  end implementation #############################
