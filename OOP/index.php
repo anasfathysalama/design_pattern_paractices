@@ -8,8 +8,15 @@ use OOP\Relations\Aggregation\Developer;
 use OOP\Relations\Compostion\CPU;
 use OOP\Relations\Compostion\Ram;
 use OOP\Relations\Compostion\Machine;
+use OOP\SOLID\OCP\PaymentService;
+use OOP\SOLID\OCP\PaypalMethod;
+use OOP\SOLID\OCP\StripeMethod;
+use OOP\SOLID\SRP\Attack;
+use OOP\SOLID\SRP\Defense;
+use OOP\SOLID\SRP\Keeper;
+use OOP\SOLID\SRP\Plan;
 
-/* implenetaion of association relation between teacher object and printer object */
+/* implementation of association relation between teacher object and printer object */
 // Association	Has-a
 
 //$teacher = new Teacher("Anas Fathy");
@@ -20,11 +27,11 @@ use OOP\Relations\Compostion\Machine;
 //$printerClass->setPrintText("Test Text");
 //var_dump($printerClass->printToScreen());
 
-/* End Of Implementaion */
+/* End Of implementation */
 
 #####################################################################################################################
 
-/* implenetaion of aggergation relation  */
+/* implementation of aggregation relation  */
 // Aggregation HAS-A
 // Project Has A List Of Developers
 
@@ -34,19 +41,41 @@ use OOP\Relations\Compostion\Machine;
 //$xProject->setDeadLineTo(new \DateInterval('P1M'));
 //echo $xProject->showProjectInfo();
 
-/* End Of Implementaion */
+/* End Of implementation */
 
 
 #####################################################################################################################
 
-/* implenetaion of compostion relation  */
-// Compostion is PART-OF
+/* implementation of Composition relation  */
+// Composition is PART-OF
 // Ram and CPU Is Part Off Machine
 
-$ram = new Ram(8);
-$cpu = new CPU(3);
-$machine = new Machine($cpu, $ram);
-dump($machine->displayMachineInfo());
-/* End Of Implementaion */
+//$ram = new Ram(8);
+//$cpu = new CPU(3);
+//$machine = new Machine($cpu, $ram);
+//dump($machine->displayMachineInfo());
+/* End Of implementation */
+
+#####################################################################################################################
+
+############################### SOLID PRINCIPLES ##########################################################
+
+
+/* implementation of SRP  */
+
+//$plan = new Plan(new Attack(), new Defense(), new Keeper());
+//dump($plan->setPlan());
+
+/* End Of implementation */
+
+
+/* implementation of OCP  */
+
+$paymentService = new PaymentService(new StripeMethod());
+$paymentService->pay();
+echo "<br>";
+$paymentService->changePaymentMethod(new PaypalMethod());
+$paymentService->pay();
+/* End Of implementation */
 
 #####################################################################################################################
