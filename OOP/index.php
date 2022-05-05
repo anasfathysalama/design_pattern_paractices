@@ -8,6 +8,9 @@ use OOP\Relations\Aggregation\Developer;
 use OOP\Relations\Compostion\CPU;
 use OOP\Relations\Compostion\Ram;
 use OOP\Relations\Compostion\Machine;
+use OOP\SOLID\DIP\PaymentProcess;
+use OOP\SOLID\DIP\PaypalPaymentMethod;
+use OOP\SOLID\DIP\StripePaymentMethod;
 use OOP\SOLID\LSP\EmailService;
 use OOP\SOLID\LSP\ServiceOne;
 use OOP\SOLID\LSP\ServiceTwo;
@@ -85,9 +88,16 @@ use OOP\SOLID\SRP\Plan;
 
 /* implementation of LSP  */
 
-$email = new EmailService();
-$email->send(new ServiceOne());
-$email->send(new ServiceTwo());
+//$email = new EmailService();
+//$email->send(new ServiceOne());
+//$email->send(new ServiceTwo());
+
+/* End Of implementation */
+
+/* implementation of DIP  */
+
+$paymentMethod = new PaymentProcess(new PaypalPaymentMethod());
+$paymentMethod->pay();
 
 /* End Of implementation */
 
