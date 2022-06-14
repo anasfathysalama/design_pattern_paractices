@@ -96,9 +96,86 @@ use OOP\SOLID\SRP\Plan;
 
 /* implementation of DIP  */
 
-$paymentMethod = new PaymentProcess(new PaypalPaymentMethod());
-$paymentMethod->pay();
+//$paymentMethod = new PaymentProcess(new PaypalPaymentMethod());
+//$paymentMethod->pay();
 
 /* End Of implementation */
 
+
 #####################################################################################################################
+
+
+//function findLastKey(array $array, $value)
+//{
+//    $a = array_flip($array);
+//    return $a[$value];
+//}
+//
+//echo findLastKey(array('Hello' => 'Green', 'World' => 'Blue'), 'Blue');
+
+//function validate(string $username) : bool
+//{
+//    if(preg_match('/^[a-z]_{0,1}\w{2,23}[^_]$/i', $username)){
+//        return true;
+//    }
+//    return false;
+//}
+//
+//echo validate('Mike_Standish') ? 'Valid' : 'Invalid'; #Valid username
+//echo "\n";
+//echo validate('Mike Standish') ? 'Valid' : 'Invalid'; #Invalid username
+
+
+//function prependSum(array $array) : array
+//{
+//    $sum = array_sum($array);
+//    $newArray = array_unshift($array, $sum);
+//
+//    return $newArray;
+//}
+//
+//$array = array(1,2,3);
+//$sum = prependSum($array);
+//echo($sum.PHP_EOL);
+//print_r($array);
+
+
+function getTimestampsByDescription(string $xml, string $description) //: array
+{
+//    $document = new DOMDocument();
+//    $document->loadXML($xml);
+//    $path = new DOMXPath($document);
+//    $ele = $path->query('//event[@timestamp = "'. $description .'"]');
+//    var_dump($ele); //$ele;
+//    $xml=simplexml_load_file($xml);
+//    var_dump($xml);
+    $arr = [];
+    $xml = simplexml_load_string($xml);
+    foreach ($xml as $string) {
+        if ($string['description'] != $description) {
+            $arr[] = $string[0]['timestamp'] ;
+        }
+        return $arr[0][0][0];
+    }
+
+
+//    print_r($xml);
+}
+
+$xml = <<<XML
+<?xml version="1.0" encoding="UTF-8"?>
+<log>
+    <event timestamp="1614285589">
+        <description>Intrusion detected</description>
+    </event>
+    <event timestamp="1614286432">
+        <description>Intrusion ended</description>
+    </event>
+</log>
+XML;
+echo "<pre>";
+print_r(getTimestampsByDescription($xml, 'Intrusion ended'));
+echo "</pre>";
+
+
+

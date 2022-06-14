@@ -4,7 +4,8 @@
     "psr-4": {
       "Creational\\": "Creational",
       "Behavioral\\": "Behavioral",
-      "OOP\\": "OOP"
+      "OOP\\": "OOP",
+      "Structural\\" : "Structural"
     }
   },
   "autoload-dev": {

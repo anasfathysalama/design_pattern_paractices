@@ -34,6 +34,7 @@ class ComposerStaticInit211c181178e51b225b494dff08b87a73
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Component\\VarDumper\\' => 28,
+            'Structural\\' => 11,
         ),
         'P' => 
         array (
@@ -88,6 +89,10 @@ class ComposerStaticInit211c181178e51b225b494dff08b87a73
         'Symfony\\Component\\VarDumper\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
+        'Structural\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Structural',
         ),
         'Prophecy\\' => 
         array (
