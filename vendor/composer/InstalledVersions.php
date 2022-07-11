@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '267e80f4abce370142f0597341baa4bf47129fd0',
+    'reference' => 'fc69f317b17168f79db5414ca9edd5f21865cb0d',
     'name' => 'user/design_pattern',
   ),
   'versions' => 
@@ -334,7 +334,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '267e80f4abce370142f0597341baa4bf47129fd0',
+      'reference' => 'fc69f317b17168f79db5414ca9edd5f21865cb0d',
     ),
     'webmozart/assert' => 
     array (
