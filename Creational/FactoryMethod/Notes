@@ -1,0 +1,9 @@
+بعمل interface من خلاله بقدر اعمل object بس بخلى ال subclasses هما اللى يقرورا ال object هيكون نسخة من انهى class   .
+ال factory بيخلى ال superclass يحدد كل ال behaviour وال standard اللى هيمشى عليها باقى ال   sub classes وبيمنح عملية ال creation لل objects لل subclasses .
+
+
+Design Principles Factory Method Pattern Apply:
+ # Encapsulate what varies.
+ # open closed .
+ # program to interface not to implementation.
+ # depend on abstraction.

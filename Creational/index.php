@@ -2,13 +2,13 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 
+use Creational\Singleton\Application;
 use Creational\AbstractFactory\DesktopForm\DesktopFormFactory;
 use Creational\AbstractFactory\RenderForm;
 use Creational\AbstractFactory\WebForm\WebFormFactory;
 use Creational\Builder\Builders\ComputerSimpleBuilder;
 use Creational\Builder\Director;
 use Creational\Builder\Builders\ComputerXlBuilder;
-use Creational\Singleton\Application;
 
 
 ###############  Builder Pattern Implementation #############################
@@ -53,11 +53,13 @@ use Creational\Singleton\Application;
 ###############  end implementation #############################
 
 ###############  Singleton Pattern Implementation #############################
-$instanceOne = Application::getInstance();
-$instanceTwo = Application::getInstance();
-if ($instanceOne === $instanceTwo) {
-    echo "The Two instances are the same";
-} else {
-    echo "The Two instances not the same";
-}
+//
+//$instanceOne = serialize(Application::someOtherLogic());
+//$instanceTwo = unserialize($instanceOne);
+////$instanceTwo = Application::getInstance();
+//if ($instanceOne === $instanceTwo) {
+//    echo "The Two instances are the same";
+//} else {
+//    echo "The Two instances not the same";
+//}
 ###############  end implementation #############################

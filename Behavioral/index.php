@@ -11,10 +11,12 @@ use Behavioral\Strategy\strategies\PlanTravel;
 use Behavioral\Strategy\strategies\WalkTravel;
 use Behavioral\Strategy\TripContext;
 
-
+$array = [1,2,"a"];
+var_dump($array);
 
 /* Start Implementation Of Strategy Pattern */
 $trip = new TripContext(new WalkTravel());      #  concrete class is  BusTravel
+var_dump($trip);
 $trip->confirmTrip();
 
 echo "<br><br>";

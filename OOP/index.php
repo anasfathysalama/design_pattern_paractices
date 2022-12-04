@@ -1,6 +1,8 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
+use OOP\EncapsulateWhatVaries\OrderPayment;
+use OOP\EncapsulateWhatVaries\PaymentTypes;
 use OOP\Relations\Association\Printer\PlainTextPrinter;
 use OOP\Relations\Association\Teacher;
 use OOP\Relations\Aggregation\Project;
@@ -8,6 +10,7 @@ use OOP\Relations\Aggregation\Developer;
 use OOP\Relations\Compostion\CPU;
 use OOP\Relations\Compostion\Ram;
 use OOP\Relations\Compostion\Machine;
+use OOP\Relations;
 use OOP\SOLID\DIP\PaymentProcess;
 use OOP\SOLID\DIP\PaypalPaymentMethod;
 use OOP\SOLID\DIP\StripePaymentMethod;
@@ -69,8 +72,8 @@ use OOP\SOLID\SRP\Plan;
 
 /* implementation of SRP  */
 
-//$plan = new Plan(new Attack(), new Defense(), new Keeper());
-//dump($plan->setPlan());
+$plan = new Plan();
+
 
 /* End Of implementation */
 
@@ -101,9 +104,24 @@ use OOP\SOLID\SRP\Plan;
 
 /* End Of implementation */
 
+/*
+ *
+ *
+ *      $x = [
+ *
+ *    "room_code" => [
+ *
+ * ]
+ * ]
+ *
+ * */
+
 
 #####################################################################################################################
 
+$payment = new OrderPayment();
+$payment->setPaymentTypes(new PaymentTypes());
+echo $payment->pay('online');
 
 //function findLastKey(array $array, $value)
 //{
@@ -137,45 +155,52 @@ use OOP\SOLID\SRP\Plan;
 //$array = array(1,2,3);
 //$sum = prependSum($array);
 //echo($sum.PHP_EOL);
-//print_r($array);
+//print_r($array)
 
 
-function getTimestampsByDescription(string $xml, string $description) //: array
-{
-//    $document = new DOMDocument();
-//    $document->loadXML($xml);
-//    $path = new DOMXPath($document);
-//    $ele = $path->query('//event[@timestamp = "'. $description .'"]');
-//    var_dump($ele); //$ele;
-//    $xml=simplexml_load_file($xml);
-//    var_dump($xml);
-    $arr = [];
-    $xml = simplexml_load_string($xml);
-    foreach ($xml as $string) {
-        if ($string['description'] != $description) {
-            $arr[] = $string[0]['timestamp'] ;
-        }
-        return $arr[0][0][0];
-    }
+//function turing($x){
+//    return function ($y) use ($x){
+//        return str_repeat($y , $x);
+//    };
+//}
+//
+//$a = turing(2);
+//$b = turing(3);
+//
+//echo $a(3) . $b(2);
 
+//echo '3' . (print '5') + 7 ;
 
-//    print_r($xml);
-}
+//try{
+//    class MyTuring extends \Exception {
+//
+//    }
+//    try{
+//        throw new MyTuring();
+//    }catch (\Exception $e){
+//        echo "1:";
+//        throw $e;
+//    }catch (\Exception $e){
+//        echo "2:";
+//        throw $e;
+//    }
+//}catch(\Exception $e){
+//    echo get_class($e) ;
+//}
 
-$xml = <<<XML
-<?xml version="1.0" encoding="UTF-8"?>
-<log>
-    <event timestamp="1614285589">
-        <description>Intrusion detected</description>
-    </event>
-    <event timestamp="1614286432">
-        <description>Intrusion ended</description>
-    </event>
-</log>
-XML;
-echo "<pre>";
-print_r(getTimestampsByDescription($xml, 'Intrusion ended'));
-echo "</pre>";
+//class x {
+//    private $b = 'b' ;
+//    public $c = 'c' ;
+//}
+//
+//$v = (array) new x();
+//var_dump($v);
+//echo array_key_exists('b' , $v) ? 'found' : 'not';
 
+//$x = function(){
+//    return 'f';
+//};
+//
+//echo gettype($x);
 
-
+//echo "1" + 2 * "007";

@@ -34,6 +34,6 @@ class Application
 
     public static function someOtherLogic()
     {
-
+         return new self();
     }
 }
